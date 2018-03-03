@@ -1,0 +1,128 @@
+/*----------------------------------------------
+    Index
+	
+		#1. General 
+		#2. Header
+		#3. Menu
+		#4. Body
+		#5. Footer
+		#6. Utilities
+		#7. Media Queries
+		
+----------------------------------------------*/
+
+
+/*----------------------------------------------
+		#1. General
+----------------------------------------------*/
+h1,h2,h3,h4,h5,h6{}
+
+p,a,div,td,tr,th{}
+
+
+
+/*----------------------------------------------
+    Mobile hamburger menu
+----------------------------------------------*/
+#bars { 
+    cursor: pointer;
+    border-left: 1px solid #fff;
+    padding: 0.75em 1em;
+	display:none;
+}
+#bars div {
+    width: 35px;
+    height: 5px;
+    background-color: #004890;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+/* Rotate first bar */
+.change .bar-1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+/* Fade out the second bar */
+.change .bar-2 {
+    opacity: 0;
+}
+/* Rotate last bar */
+.change .bar-3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+ul.main-menu{
+	list-style: outside none;
+	display: block;
+	margin-left: 0;
+}
+
+
+
+/*----------------------------------------------
+    Desktop Menu
+----------------------------------------------*/
+header{
+	border-bottom: 1px solid #cacaca;
+    overflow: auto;
+}
+
+.title h2{
+	font-size: 1.6em;
+	margin: 0.5em auto;
+	padding: 0 0.5em;
+}
+
+.logo{
+	padding:8px;
+}
+
+
+
+
+/*----------------------------------------------
+		#4. Body
+----------------------------------------------*/
+.main{
+	dispaly: block;
+	min-height: 50em;
+	transition: background-color 0.5s ease
+}
+
+.main.dark{
+	background-color: rgba(0,0,0,0.6);
+}
+
+
+/*----------------------------------------------
+    Media Queries
+----------------------------------------------*/
+
+
+/*Foundation medium - large screen breakpoint, medium down*/
+@media screen and (max-width: 64em) {
+}
+
+/*Foundation small - medium screen breakpoint, small only*/
+@media screen and (max-width: 40em) {
+	#bars { 
+		display: block;
+		float: right;
+	}
+	
+	ul.main-menu{
+		display: none;
+		border-top: 1px solid #cacaca;
+	}
+	
+	.main-menu a{
+		display: block;
+		width: 100%;
+		padding: 1.5em;
+	}
+	
+	.logo img{
+		max-height:47px;
+	}
+}
