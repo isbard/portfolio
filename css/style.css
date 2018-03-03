@@ -15,11 +15,15 @@
 /*----------------------------------------------
 		#1. General
 ----------------------------------------------*/
-h1,h2,h3,h4,h5,h6{}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+}
 
-p,a,div,td,tr,th{}
+p,a,div,td,tr,th{
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
 
-
+.row{ max-width: 70em;}
 
 /*----------------------------------------------
     Mobile hamburger menu
@@ -55,7 +59,9 @@ p,a,div,td,tr,th{}
 ul.main-menu{
 	list-style: outside none;
 	display: block;
-	margin-left: 0;
+    margin: 0;
+    padding: 0.5em 0;
+
 }
 
 
@@ -66,26 +72,43 @@ ul.main-menu{
 header{
 	border-bottom: 1px solid #cacaca;
     overflow: auto;
+	position: fixed;
+    width: 100%;
+    background: #fff;
 }
 
 .title h2{
-	font-size: 1.6em;
-	margin: 0.5em auto;
+	font-weight: bold;
+	margin: 0.5em auto 0;
 	padding: 0 0.5em;
+	text-align: center;
 }
 
-.logo{
-	padding:8px;
+.logo{padding:8px;}
+.logo img{
+	max-height: 8em;
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-
+.main-menu li{
+    display: inline-block;
+    width: calc(97%/ 3);
+	font-size: 1.4em;
+}
+.main-menu li a{
+	padding: 0.4em;
+	display: block;
+	text-align: center;
+}
 
 
 /*----------------------------------------------
 		#4. Body
 ----------------------------------------------*/
 .main{
-	dispaly: block;
+	display: block;
 	min-height: 50em;
 	transition: background-color 0.5s ease
 }
@@ -114,6 +137,14 @@ header{
 	ul.main-menu{
 		display: none;
 		border-top: 1px solid #cacaca;
+		width: 127%;
+		left: -25%;
+		position: relative;
+	}
+	
+	.title h2{	
+		margin: 0.3em auto;
+		font-size: 2em;
 	}
 	
 	.main-menu a{
