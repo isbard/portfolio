@@ -18,11 +18,13 @@
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	text-align: center;
+	color:#3a86ff;
 }
 
+h1, h2{text-align: center;}
+
 h3,h4,h5,h6{
-	color:#3a86ff;
+	text-align: left;
 }
 
 p,a,div,td,tr,th{
@@ -44,12 +46,17 @@ a:hover{
 
 .row{ max-width: 70em;}
 
+a.anchor{
+	display: block;
+	height: 10em;
+	visibility: hidden;
+}
+
 /*----------------------------------------------
     Mobile hamburger menu
 ----------------------------------------------*/
 #bars {
     cursor: pointer;
-    border-left: 1px solid #fefcfd;
     padding: 0.75em 1em;
 	display:none;
 }
@@ -150,12 +157,14 @@ header{
 	/*background-color: #ff8c61;*/
 }
 .main section{
-	margin: 5em auto;
+	margin: 2em auto;
 }
 
-.main section:first-of-type{
-	margin-top:2em;
-}
+/*.main section:first-of-type{
+	margin-top:0;
+}*/
+
+
 
 
 /*----------------------------------------------
@@ -173,6 +182,7 @@ header{
 }
 .expand-heading h3{
 	margin: 0.5em auto 0;
+	color: #ff3366;
 	float:left;
 
 }
@@ -194,6 +204,7 @@ header{
 		font-size: 3em;
 		line-height: 1em;
 		margin-right: 0.25em;
+		color: #ff3366;
 		transition: 0.4s ease;
 }
 .expand-heading.clicked:after {
@@ -206,6 +217,7 @@ header{
     border-radius: 0 0 5px 5px;
     padding: 1em;
 		background-color: #fefcfd;
+		overflow:auto;
 }
 
 .expand img{
@@ -221,16 +233,24 @@ header{
 	display: block;
 	text-align: center;
 }
+.Contact{height: 50vh;}
 
 /*----------------------------------------------
     Media Queries
 ----------------------------------------------*/
 
+@media screen and (min-width: 64em) {
+	section{
+		height: 80vh;
+	}
+}
 
 /*Foundation medium - large screen breakpoint, medium down*/
 @media screen and (max-width: 64em) {
 
 }
+
+
 
 /*Foundation small - medium screen breakpoint, small only*/
 @media screen and (max-width: 40em) {
@@ -261,8 +281,30 @@ header{
 	.logo img{max-height:47px;}
 
 	.main{padding-top: 4.5em;}
+	.main h2{
+		font-size: 2em;
+	}
 
 	.expand-heading h3{margin-top: 1em;}
 
 	.main section{margin:2em auto;}
+
+	a.anchor{height: 4em;}
+
+
+}
+
+@media screen and (max-width: 490px) {
+	.title h1{
+		font-size: 1.3em;
+    margin: 0.9em auto 0
+	}
+
+	.social-media a{
+		font-size: 2em;
+	}
+
+	.main-menu li {
+		width:100%;
+	}
 }
