@@ -1,14 +1,14 @@
 /*----------------------------------------------
     Index
-	
-		#1. General 
+
+		#1. General
 		#2. Header
 		#3. Menu
 		#4. Body
 		#5. Footer
 		#6. Utilities
 		#7. Media Queries
-		
+
 ----------------------------------------------*/
 
 
@@ -17,10 +17,29 @@
 ----------------------------------------------*/
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+h3,h4,h5,h6{
+	color:#3a86ff;
 }
 
 p,a,div,td,tr,th{
 	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+p, span, div{
+	font-size:18px;
+	color: #011627;
+}
+
+a{
+	color: #ff3366;
+}
+
+a:hover{
+	color:#a32141;
 }
 
 .row{ max-width: 70em;}
@@ -28,18 +47,22 @@ p,a,div,td,tr,th{
 /*----------------------------------------------
     Mobile hamburger menu
 ----------------------------------------------*/
-#bars { 
+#bars {
     cursor: pointer;
-    border-left: 1px solid #fff;
+    border-left: 1px solid #fefcfd;
     padding: 0.75em 1em;
 	display:none;
 }
 #bars div {
     width: 35px;
     height: 5px;
-    background-color: #004890;
+    background-color: #ff3366;
     margin: 6px 0;
     transition: 0.4s;
+}
+
+#bars.change div{
+	background-color: #a32141;
 }
 /* Rotate first bar */
 .change .bar-1 {
@@ -71,30 +94,31 @@ ul.main-menu{
 ----------------------------------------------*/
 header{
 	border-bottom: 1px solid #cacaca;
-    overflow: auto;
+	overflow: auto;
 	position: fixed;
-    width: 100%;
-    background: #fff;
+  width: 100%;
+  background: #fefcfd;
+	color: #011627;
+	z-index: 1;
 }
 
-.title h2{
-	font-weight: bold;
+.title h1{
 	margin: 0.5em auto 0;
 	padding: 0 0.5em;
-	text-align: center;
+	font-size: 2.5rem;
 }
 
 .logo{padding:8px;}
 .logo img{
 	max-height: 8em;
 	margin-left: auto;
-    margin-right: auto;
-    display: block;
+  margin-right: auto;
+  display: block;
 }
 
 .main-menu li{
-    display: inline-block;
-    width: calc(97%/ 3);
+  display: inline-block;
+  width: calc(97%/ 3);
 	font-size: 1.4em;
 }
 .main-menu li a{
@@ -110,7 +134,8 @@ header{
 .main{
 	display: block;
 	min-height: 50em;
-	transition: background-color 0.5s ease
+	transition: background-color 0.5s ease;
+	padding-top: 10em;
 }
 
 .main.dark{
@@ -119,21 +144,101 @@ header{
 
 
 /*----------------------------------------------
+		#4. Sections
+----------------------------------------------*/
+.Work {
+	/*background-color: #ff8c61;*/
+}
+.main section{
+	margin: 5em auto;
+}
+
+.main section:first-of-type{
+	margin-top:2em;
+}
+
+
+/*----------------------------------------------
+		#6. Utilities
+----------------------------------------------*/
+
+/* Accordion
+----------------------------------------- */
+.expand-heading {
+    margin: 15px 0 0 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 8px 10px;
+		overflow: auto;
+}
+.expand-heading h3{
+	margin: 0.5em auto 0;
+	float:left;
+
+}
+.expand-heading.clicked {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+}
+.expand-heading:hover {
+    cursor: pointer;
+}
+.expand-heading:hover,
+.expand-heading.clicked {
+    background-color: #f5f5f5;
+}
+.expand-heading:after {
+    content: "+";
+    float: right;
+		font-size: 3em;
+		line-height: 1em;
+		margin-right: 0.25em;
+		transition: 0.4s ease;
+}
+.expand-heading.clicked:after {
+		transform: rotate(45deg)
+}
+.expand {
+    display: none;
+    border: 1px solid #dbdbdb;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    padding: 1em;
+		background-color: #fefcfd;
+}
+
+.expand img{
+	margin-bottom: 0.5em;
+}
+
+
+/*----------------------------------------------
+		#6. Footer
+----------------------------------------------*/
+.social-media a{
+	font-size: 5em;
+	display: block;
+	text-align: center;
+}
+
+/*----------------------------------------------
     Media Queries
 ----------------------------------------------*/
 
 
 /*Foundation medium - large screen breakpoint, medium down*/
 @media screen and (max-width: 64em) {
+
 }
 
 /*Foundation small - medium screen breakpoint, small only*/
 @media screen and (max-width: 40em) {
-	#bars { 
+	#bars {
 		display: block;
 		float: right;
 	}
-	
+
 	ul.main-menu{
 		display: none;
 		border-top: 1px solid #cacaca;
@@ -141,19 +246,23 @@ header{
 		left: -25%;
 		position: relative;
 	}
-	
-	.title h2{	
+
+	.title h1{
 		margin: 0.3em auto;
 		font-size: 2em;
 	}
-	
+
 	.main-menu a{
 		display: block;
 		width: 100%;
 		padding: 1.5em;
 	}
-	
-	.logo img{
-		max-height:47px;
-	}
+
+	.logo img{max-height:47px;}
+
+	.main{padding-top: 4.5em;}
+
+	.expand-heading h3{margin-top: 1em;}
+
+	.main section{margin:2em auto;}
 }
