@@ -17,7 +17,7 @@
 ----------------------------------------------*/
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Raleway', Helvetica, Arial, sans-serif;
-	font-weight: 900;
+	font-weight: 700;
 	color:#3a86ff;
 }
 
@@ -34,13 +34,14 @@ p,a,div,td,tr,th{
 p, span, div{
 	font-size:18px;
 	color: #011627;
+	text-align: justify;
 }
 
 a{
 	color: #ff3366;
 }
 
-a:hover{
+a:hover,a:focus{
 	color:#a32141;
 }
 
@@ -88,7 +89,7 @@ a.anchor{
 
 ul.main-menu{
 	list-style: outside none;
-	display: block;
+	display: none;
     margin: 0;
     padding: 0.5em 0;
 
@@ -103,21 +104,25 @@ header{
 	border-bottom: 1px solid #cacaca;
 	overflow: auto;
 	position: fixed;
-  width: 100%;
-  background: #fefcfd;
+	width: 100%;
+	background: #fefcfd;
 	color: #011627;
 	z-index: 1;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(202,202,202,1);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(202,202,202,1);
+	box-shadow: 0px 4px 10px 0px rgba(202,202,202,1);
 }
 
 .title h1{
 	margin: 0.5em auto 0;
 	padding: 0 0.5em;
-	font-size: 2.5rem;
+	font-size: 3.5rem;
+	font-weight: 900;
 }
 
 .logo{padding:8px;}
 .logo img{
-	max-height: 8em;
+	max-height: 6em;
 	margin-left: auto;
   margin-right: auto;
   display: block;
@@ -128,6 +133,7 @@ header{
   width: calc(97%/ 3);
 	font-size: 1.4em;
 }
+
 .main-menu li a{
 	padding: 0.4em;
 	display: block;
@@ -140,10 +146,13 @@ header{
 ----------------------------------------------*/
 .main{
 	display: block;
-	min-height: 50em;
+	overflow: auto;
 	transition: background-color 0.5s ease;
-	padding-top: 10em;
-}
+	padding-top: 8em;
+	max-width: 120em;
+	margin-left: auto;
+	margin-right: auto;
+ }
 
 .main.dark{
 	background-color: rgba(0,0,0,0.6);
@@ -153,19 +162,14 @@ header{
 /*----------------------------------------------
 		#4. Sections
 ----------------------------------------------*/
-.Work {
-	/*background-color: #ff8c61;*/
-}
+
 .main section{
 	margin: 2em auto;
+	overflow: auto;
 }
-
-/*.main section:first-of-type{
-	margin-top:0;
-}*/
-
-
-
+.Contact {
+	padding: 2em 0;
+}
 
 /*----------------------------------------------
 		#6. Utilities
@@ -222,6 +226,10 @@ header{
 
 .expand img{
 	margin-bottom: 0.5em;
+/*	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;*/
 }
 
 
@@ -229,7 +237,7 @@ header{
 		#6. Footer
 ----------------------------------------------*/
 .social-media a{
-	font-size: 5em;
+	font-size: 4em;
 	display: block;
 	text-align: center;
 }
@@ -257,7 +265,6 @@ header{
 	}
 
 	ul.main-menu{
-		display: none;
 		border-top: 1px solid #cacaca;
 		width: 127%;
 		left: -25%;
@@ -282,11 +289,10 @@ header{
 		font-size: 2em;
 	}
 
-	.expand-heading h3{margin-top: 1em;}
+	.expand-heading h3{margin-top: .75em;}
 
 	.main section{margin:2em auto;}
 
-	a.anchor{height: 4em;}
 
 
 }

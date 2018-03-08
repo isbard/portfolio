@@ -5,8 +5,15 @@ $(document).ready(function() {
 	});
 
 	$('.expand-heading').click(function() {
-		$(this).toggleClass('clicked');
-		$(this).next('.expand').slideToggle('fast');
+		$('.clicked').not(this)
+			.toggleClass('clicked')
+			.next('.expand').
+			slideToggle('fast');
+
+		$(this)
+			.toggleClass('clicked')
+			.next('.expand')
+			.slideToggle('fast');
 	});
 });
 
