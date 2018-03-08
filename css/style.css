@@ -16,8 +16,8 @@
 		#1. General
 ----------------------------------------------*/
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-	font-weight: bold;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-weight: 900;
 	color:#3a86ff;
 }
 
@@ -48,7 +48,7 @@ a:hover{
 
 a.anchor{
 	display: block;
-	height: 10em;
+	/*height: 10em;*/
 	visibility: hidden;
 }
 
@@ -233,16 +233,13 @@ header{
 	display: block;
 	text-align: center;
 }
-.Contact{height: 50vh;}
 
 /*----------------------------------------------
     Media Queries
 ----------------------------------------------*/
 
 @media screen and (min-width: 64em) {
-	section{
-		height: 80vh;
-	}
+
 }
 
 /*Foundation medium - large screen breakpoint, medium down*/
