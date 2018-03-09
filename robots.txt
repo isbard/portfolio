@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /
+Crawl-delay: 600
+
+# but allow only important bots
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Mediapartners-Google
+User-agent: msnbot
+User-agent: msnbot-media
+User-agent: Slurp
+User-agent: Yahoo-Blogs
+User-agent: Yahoo-MMCrawler
+
+#Directories
+Disallow: /bin/
+Disallow: /content/preview.aspx
+Disallow: /dashboard/
+Disallow: /data/
+Disallow: /email/
+Disallow: /user/
+Disallow: /utility/
+Crawl-delay: 600

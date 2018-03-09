@@ -152,6 +152,8 @@ header{
 	max-width: 120em;
 	margin-left: auto;
 	margin-right: auto;
+	background: #fefcfd;
+	min-height: 100vh;
  }
 
 .main.dark{
@@ -226,10 +228,6 @@ header{
 
 .expand img{
 	margin-bottom: 0.5em;
-/*	max-width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;*/
 }
 
 
